@@ -1,0 +1,4 @@
+enum Error{
+	   INT_OVERFLOW,
+	   OUT_OF_SCOPE
+};

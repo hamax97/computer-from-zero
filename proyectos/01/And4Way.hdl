@@ -1,0 +1,13 @@
+/**
+ * 4 Way And
+*/
+
+CHIP And4Way{
+    IN x, y, z, w;
+    OUT out;
+
+    PARTS:
+    And(a = x, b = y, out = out1);
+    And(a = out1, b = z, out = out2);
+    And(a = out2, b = w, out = out);
+}

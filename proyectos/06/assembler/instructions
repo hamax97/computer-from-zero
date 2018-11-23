@@ -1,0 +1,5 @@
+Computer organization
+- Project 6
+- Author: Hamilton Tobon Mosquera
+- How to Compile: g++ src/main.cpp src/parser.cpp src/code.cpp -o bin/executable
+- How to run: $ ./bin/executable Add.asm

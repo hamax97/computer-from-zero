@@ -1,0 +1,92 @@
+class BouncingBall{
+   field int radius;
+   field int speedX;
+   field int speedY;
+   field int posX;
+   field int posY;
+
+   static String ball;
+   static String comma1;
+   static String comma2;
+   static String bSpeed;
+
+   constructor BouncingBall new (int r, int sX, int sY){
+      let radius = r;
+      let speedX = sX;
+      let speedY = sY;
+      let posX = radius + 20;
+      let posY = radius + 40;
+
+      let ball = String.new(5);
+      let ball = "Ball{";
+      let comma1 = String.new(2);
+      let comma1 = ", ";
+      let comma2 = String.new(2);
+      let comma2 = "} ";
+      let bSpeed = String.new(6);
+      let bSpeed = "Speed{";
+      
+      return this;
+   }
+
+   function void func(){
+      do Screen.setColor(true);
+      return;
+   }
+
+   method void draw(boolean color){
+      //do func();
+      do Screen.setColor(color);
+      do Screen.drawCircle(posX, posY, radius);
+      return;
+   }
+
+   method void run(){
+      do Screen.drawRectangle(0, 0, 511, 255);
+      while(true){
+         //this rectangle to avoid the ball erasing the corner of the status string
+         do Screen.drawRectangle(0, 0, 250, 20);
+         //PRINT STATUS
+         do Output.moveCursor(0,0);
+	 do Output.printString(ball);
+	 do Output.printInt(posX);
+	 do Output.printString(comma1);
+	 do Output.printInt(posY);
+	 do Output.printString(comma2);
+	 do Output.printString(bSpeed);
+	 do Output.printInt(speedX);
+	 do Output.printString(comma1);
+	 do Output.printInt(speedY);
+	 do Output.printString(comma2);
+
+         do draw(false); //draws a white circle
+         //refresh
+	 do Sys.wait(80);
+	 do draw(true);
+      
+         let posX = posX + speedX;
+	 let posY = posY + speedY;
+
+	 if((posX - radius) < 0){
+	    let speedX = -speedX;
+	    let posX = radius;
+	 }else{
+	    if((posX + radius) > 511){
+	       let speedX = -speedX;
+	       let posX = 511 - radius;
+	    }
+	 }
+
+	 if((posY - radius) < 0){
+	    let speedY = -speedY;
+	    let posY = radius;
+	 }else{
+	    if((posY + radius) > 255){
+	       let speedY = -speedY;
+	       let posY = 255 - radius;
+	    }
+	 }
+      }
+      return;
+   }
+}

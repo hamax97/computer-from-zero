@@ -1,0 +1,13 @@
+class Main{
+   function void main(){
+      var BouncingBall ball;
+      var int radio;
+      let radio = 100;
+      //let ball = BouncingBall.new(radio, 6, 4);
+      //starts the program
+      do ball.run();
+      //do BouncingBall.run();
+      
+      return;
+   }
+}

@@ -1,0 +1,8 @@
+Computer organization
+- Project 8 Virtual Machine 2
+- Author: Hamilton Tobon Mosquera
+- How to Compile:
+  in the project directory root use the command $ make
+- How to run in bash terminal: $ ./bin/executable directory/ or ./bin/executable directory/file.vm
+- How to run in windows cmd: /bin/executable.exe directory/ or /bin/executable.exe directory/file.vm
+- Then the File.asm is going to appear in the same directory you gave as parameter

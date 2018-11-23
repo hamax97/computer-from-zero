@@ -1,0 +1,8 @@
+function Main.main 2
+push constant 100
+pop local 1
+push local 0
+call BouncingBall.run 1
+pop temp 0
+push constant 0
+return

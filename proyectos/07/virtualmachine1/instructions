@@ -1,0 +1,7 @@
+Computer organization
+- Project 7 Virtual Machine 1
+- Author: Hamilton Tobon Mosquera
+- How to Compile: g++ src/main.cpp src/parser.cpp src/code.cpp -o bin/executable
+- How to run in bash terminal: $ ./bin/executable tests/File.vm
+- How to run in windows cmd: /bin/executable.exe tests/File.vm
+- Then the File.asm is going to appear in the same directory where File.vm is
